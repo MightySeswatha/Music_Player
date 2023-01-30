@@ -17,26 +17,12 @@ background-color: 	#F5F5F5;
 border: 1px solid 	#E8E8E8;    
 }
 
-/*
-#play,
-#timer,
-#line,
-#volume{
-border: 1px solid red;
-}
-*/
-
 #play{
 display: flex;
 width: 30px;
 height: 30px;
 align-items: center;
 justify-content: center;
-/*background-image: url("/images/play.svg") ;
-background-repeat: no-repeat;
-background-position: center center;
-background-size: auto;
-*/
 border-radius: 50%;
 transition: 0.15s;
 }
@@ -72,6 +58,17 @@ justify-content: center;
 border-radius: 50%;
 transition: 0.15s;
 }
+
+#volume_img{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background-image: url("../images/volume1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    }
 
 #line{
 display: flex;

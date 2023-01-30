@@ -29,21 +29,21 @@ x.volume = bar.children[0].value/100;
 //console.log(bar.children[0].value);
 
 if(bar.children[0].value <= 1){
-volume.children[1].src = "../images/volume2.png";
+volume.children[1].style.backgroundImage = "url('../images/volume2.png')";
 }
 else{
-volume.children[1].src = "../images/volume1.png";
+volume.children[1].style.backgroundImage = "url('../images/volume1.png')";
 }
 
 if(x.currentTime == x.duration){
-    play.childNodes[1].src ="../images/play.png";
+    play.childNodes[1].style.backgroundImage = "url('../images/play.png')";
     t = 0;
 }
 
 }
 
 slider.oninput = function() {
-    //console.log(this.value);
+   // console.log(this.value);
     x.currentTime = line.children[0].value*(x.duration/1000000);
 }
 
@@ -53,7 +53,7 @@ var img = play.childNodes[1];
 console.log(img.src);
 
 if(t == 0){
-    img.src = "../images/pause.png";
+    img.style.backgroundImage = "url('../images/pause.png')";
     t++;
 
 /*Play music*/
@@ -62,7 +62,7 @@ x.play();
 }
 
 else{
-    img.src = "../images/play.png";
+    img.style.backgroundImage = "url('../images/play.png')";
     t = 0; 
 
 /*Stop music*/
