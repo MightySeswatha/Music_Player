@@ -1,0 +1,119 @@
+body{
+display: flex;
+justify-content: center;
+box-sizing: border-box;
+}
+
+.off{
+display: none;
+}
+
+.p_body{
+display: flex;
+margin-top: 200px; /*отступ для проверки bar*/
+width: 100%;
+padding: 15px;
+background-color: 	#F5F5F5;
+border: 1px solid 	#E8E8E8;    
+}
+
+/*
+#play,
+#timer,
+#line,
+#volume{
+border: 1px solid red;
+}
+*/
+
+#play{
+display: flex;
+width: 30px;
+height: 30px;
+align-items: center;
+justify-content: center;
+
+
+/*background-image: url("/images/play.svg") ;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: auto;
+*/
+border-radius: 50%;
+transition: 0.15s;
+}
+
+#play img{
+padding-left: 2px;
+}
+
+#play:hover,
+#volume:hover{
+background-color: #D8D8D8;
+}
+
+#timer{
+display: flex;
+padding: 0 15px;
+align-items: center;
+}
+
+#volume{
+position: relative;
+width: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+transition: 0.15s;
+}
+
+#line{
+display: flex;
+padding: 0 5px;
+width: 100%;
+align-items: center;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    border-radius: 10px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .1s; /* 0.2 seconds transition on hover */
+    transition: opacity .1s;
+    scroll-behavior: smooth;
+}
+
+.slider:hover{
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+#bar{
+position: absolute;
+transform: rotate(270deg);
+margin-top: -160px;
+}
+
+#slider2{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100px; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    border-radius: 10px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .1s; /* 0.2 seconds transition on hover */
+    transition: opacity .1s;
+   /* transform: rotate(90deg);
+   */
+}
+
+#slider2:hover{
+    opacity: 1; /* Fully shown on mouse-over */
+}
