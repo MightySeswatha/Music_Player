@@ -52,7 +52,6 @@ slider.oninput = function() {
 play.onclick = () => {
 
 var img = play.childNodes[1];
-console.log(img.src);
 
 if(t == 0){
     img.style.backgroundImage = "url('./images/pause.png')";
