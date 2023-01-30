@@ -30,14 +30,14 @@ x.volume = bar.children[0].value/100;
 //console.log(bar.children[0].value);
 
 if(bar.children[0].value <= 1){
-volume.children[1].style.backgroundImage = "url('/images/volume2.png')";
+volume.children[1].style.backgroundImage = "url('./images/volume2.png')";
 }
 else{
-volume.children[1].style.backgroundImage = "url('/images/volume1.png')";
+volume.children[1].style.backgroundImage = "url('./images/volume1.png')";
 }
 
 if(x.currentTime == x.duration){
-    play.childNodes[1].style.backgroundImage = "url('/images/play.png')";
+    play.childNodes[1].style.backgroundImage = "url('./images/play.png')";
     t = 0;
 }
 
@@ -55,7 +55,7 @@ var img = play.childNodes[1];
 console.log(img.src);
 
 if(t == 0){
-    img.style.backgroundImage = "url('/images/pause.png')";
+    img.style.backgroundImage = "url('./images/pause.png')";
     t++;
 
 /*Play music*/
@@ -64,7 +64,7 @@ x.play();
 }
 
 else{
-    img.style.backgroundImage = "url('/images/play.png')";
+    img.style.backgroundImage = "url('./images/play.png')";
     t = 0; 
 
 /*Stop music*/
