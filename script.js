@@ -1,7 +1,6 @@
 window.onload = () => {
 
     var play = document.getElementsByClassName("play");
-    let t = 0;
     var timer = document.getElementsByClassName("timer");
     var volume = document.getElementsByClassName("volume");
     var line = document.getElementsByClassName("line");
@@ -9,6 +8,11 @@ window.onload = () => {
     var slider = document.getElementsByClassName("slider");
     var slider2 = document.getElementsByClassName("slider2");
     var audio = document.getElementsByTagName("audio");
+    var t = [];
+
+    for(let e of audio){
+    t.push(0);
+    }
 
     for (let i = 0; i < play.length; i++) {
 
@@ -38,7 +42,7 @@ window.onload = () => {
 
             if (audio[i].currentTime == audio[i].duration) {
                 play[i].childNodes[1].style.backgroundImage = "url('./images/play.png')";
-                t = 0;
+                t[i] = 0;
             }
 
         }
@@ -53,25 +57,28 @@ window.onload = () => {
 
             var img = play[i].childNodes[1];
 
-            if (t == 0) {
+            if (t[i] == 0) {
                 img.style.backgroundImage = "url('./images/pause.png')";
-                t++;
+                t[i]++;
 
                 /*Play music*/
                 audio[i].play();
 
                 for (let j = 0; j < audio.length; j++) {
+
                     if (j != i) {
                         audio[j].pause();
                         play[j].childNodes[1].style.backgroundImage = "url('./images/play.png')";
+                        t[j] = 0;
                     }
+
                 }
 
             }
 
             else {
                 img.style.backgroundImage = "url('./images/play.png')";
-                t = 0;
+                t[i] = 0;
 
                 /*Stop music*/
                 audio[i].pause();
